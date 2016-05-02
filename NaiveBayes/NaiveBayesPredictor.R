@@ -2,7 +2,7 @@ install.packages("e1071")
 # Importing e1071 library for naive bayes classifier
 library(e1071)
 # Loading the dataset from CSV.
-housing <- read.csv("/Users/akshaymathur/Downloads/finalcensus_after_removing_vacanthouses.csv", header = TRUE)
+housing <- read.csv("../dataset/census.csv", header = TRUE)
 # Arranging the columns in required order for training.
 myvars<-c("DIVISION","ACR","BDSP","ACCESS","ELEP","GASP","FINCP","ST","RNTPRange")
 # Applying the column format created above.
@@ -38,7 +38,7 @@ print("The root mean square error is:")
 rmse(y,x)
 
 # Taking the user input for prediction
-inputData <- read.csv("/Users/akshaymathur/Downloads/userinput.csv",header = TRUE)
+inputData <- read.csv("../dataset/userinput.csv",header = TRUE)
 testvars<-c("DIVISION","ACR","BDSP","ACCESS","ELEP","GASP","FINCP","ST")
 inputData<-inputData[testvars]
 print(inputData)
